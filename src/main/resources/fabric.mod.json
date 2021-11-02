@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "noshield",
+  "version": "${version}",
+  "name": "NoShield",
+  "description": "Only renders shield while blocking.",
+  "authors": [
+    "Ultra03"
+  ],
+  "contact": {
+    "repo": "https://github.com/Ultra03/NoShield"
+  },
+  "license": "MIT",
+  "icon": "assets/noshield/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.ultra03.noshield.client.NoShieldClient"
+    ],
+    "main": [
+      "net.ultra03.noshield.NoShield"
+    ]
+  },
+  "mixins": [
+    "noshield.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.4",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}
