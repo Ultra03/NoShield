@@ -20,6 +20,7 @@ public class MixinHeldItemRenderer {
 
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if(player == null) return stack;
+        if(MinecraftClient.getInstance().gameRenderer.getCamera().isThirdPerson()) return stack;
         if(stack.getItem() == Items.SHIELD && !NoShieldClient.shouldRender)
             return new ItemStack(Items.AIR, 0);
         else
