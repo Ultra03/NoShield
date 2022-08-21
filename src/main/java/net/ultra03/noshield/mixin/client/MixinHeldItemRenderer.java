@@ -23,6 +23,8 @@ public class MixinHeldItemRenderer {
         if(MinecraftClient.getInstance().gameRenderer.getCamera().isThirdPerson()) return stack;
         if(stack.getItem() == Items.SHIELD && !NoShieldClient.shouldRender)
             return new ItemStack(Items.AIR, 0);
+        else if(stack.getItem() == Items.TOTEM_OF_UNDYING)
+            return new ItemStack(Items.AIR, 0);
         else
             return stack;
     }
